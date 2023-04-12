@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    
+
+
+
+<script>            
+
+
+// forEach
+let numbers = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100];
+numbers.forEach(function(num) {
+if(num % 2 !== 0) {
+console.log(num);
+}
+});
+
+let words = ["lorem ipsum", "javascript", "php", "css", "react", "git", "html", "mysql"];
+words.forEach(function(word) {
+if(word.length <= 4) {
+console.log(word);
+}
+});
+
+// filter
+let arr1 = [1, -3, 5, 6, -7, 8, 9, -11];
+let negativeArr = arr1.filter(function(num) {
+return num < 0;
+});
+console.log(negativeArr);
+
+let arr2 = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100];
+let evenArr = arr2.filter(function(num) {
+return num % 2 === 0;
+});
+console.log(evenArr);
+
+let arr3 = ["lorem ipsum", "javascript", "php", "css", "react", "git", "html", "mysql"];
+let filteredArr = arr3.filter(function(word) {
+return word.length !== 3;
+});
+console.log(filteredArr);
+
+// map
+let arr4 = [5, 6, 7, 8, 9];
+let squareArr = arr4.map(function(num) {
+return Math.pow(num , 2);
+});
+console.log(squareArr);
+
+let arr5 = [{a: 10, b: 5}, {a: 20, b: 22}, {a: 131, b: 55}];
+let sumArr = arr5.map(function(obj) {
+return obj.a + obj.b;
+});
+console.log(sumArr);
+
+// reduce
+let arr6 = [-13, 0, 12, 1662, -0.32, -102, -2];
+let negativeSum = arr6.filter(function(num) {
+return num < 0;
+}).reduce(function(acc, num) {
+return acc + num;
+}, 0);
+console.log(negativeSum);
+
+let arr7 = [{x: 10, y: "lorem"}, {x: 21, y: "lorem"}, {x: -17, y: "lorem"}, {x: 156, y: "lorem"}];
+let xnumber = arr7.reduce(function(acc, obj) {
+return acc + obj.x;
+}, 0);
+console.log(xnumber);
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
